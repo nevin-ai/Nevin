@@ -12,7 +12,7 @@ import { SCENE_SOUNDS, IMAGES } from './constants';
 const SCENES = [
   { id: 0, component: ChocolateGate, duration: 12000 }, // Intro
   { id: 1, component: MatriarchyParty, duration: 12000 }, // Party (Cats)
-  { id: 2, component: MemoryLane, duration: 30000 }, // Memories (Increased to 117s)
+  { id: 2, component: MemoryLane, duration: 169000 }, // Memories (Increased to 125s to ensure full scroll)
   { id: 3, component: ApologySection, duration: 30000 }, // Apology & Garden Merged
   { id: 4, component: FinaleSection, duration: 0 }, // Finale (Stays)
 ];
