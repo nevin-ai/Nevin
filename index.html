@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Baba</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Nunito:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+      
+      body {
+        font-family: 'Nunito', sans-serif;
+        overflow: hidden; /* Prevent scrolling for video feel */
+        background-color: #000;
+      }
+      .font-script {
+        font-family: 'Dancing Script', cursive;
+      }
+      .font-serif {
+        font-family: 'Playfair Display', serif;
+      }
+      
+      /* Custom Tulip Cursor */
+      .cursor-tulip {
+        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" style="font-size: 24px"><text y="20">🌷</text></svg>'), auto;
+      }
+      
+      /* 3D Cartoon Visual Style */
+      .cartoon-style {
+        filter: contrast(115%) saturate(120%);
+      }
+
+      .polaroid-frame {
+        background: #fff;
+        padding: 12px 12px 50px 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform: rotate(-2deg);
+      }
+      
+      .polaroid-frame:hover {
+        transform: rotate(0deg) scale(1.05);
+        z-index: 20;
+        box-shadow: 0 20px 50px rgba(255,105,180,0.4);
+      }
+      
+      .animate-pan {
+        animation: pan 30s linear infinite alternate;
+      }
+
+      @keyframes pan {
+        0% { transform: scale(1) translate(0, 0); }
+        100% { transform: scale(1.2) translate(-5%, -5%); }
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+      }
+
+      /* Scene Transitions */
+      .scene-enter {
+        animation: slideIn 1s ease-out forwards;
+      }
+      
+      @keyframes slideIn {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+
+      .perspective-container {
+        perspective: 1500px;
+      }
+      
+      .card-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+      }
+      
+      .glow-text {
+        text-shadow: 0 0 10px rgba(255,255,255,0.8), 0 0 20px rgba(236,72,153,0.6);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
